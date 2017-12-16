@@ -1,0 +1,32 @@
+<% include header %>
+<nav>
+    <span><a href="/add"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><span class="glyphicon glyphicon-plus"></span> 添加</button></a></span>
+    <span><a href="/pase"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> 删除</button></a></span>
+</nav>
+<main>
+    <table class="table">
+        <tr>
+            <th>用户名</th>
+            <th>姓名</th>
+            <th>手机</th>
+            <th>邮箱</th>
+            <th>注册日期</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        <% docs.forEach(function(doc){ %>
+            <tr>
+                <td><%= doc.username %></td>
+                <td><%= doc.name %></td>
+                <td><%= doc.tel %></td>
+                <td><%= doc.email %></td>
+                <td><%= doc.time %></td>
+                <td><button class="btn btn-default">启用</button></td>
+                <td><a href="/edit/<%= doc.name %>/<%= doc.time %>"><button class="btn btn-default">编辑</button></a></button><a href="/remove/<%= doc.name %>/<%= doc.time %>"><button class="btn btn-danger">删除</button></a></td>
+
+            </tr>
+        <% }) %>
+    </table>
+</main>
+<% include footer %>
+

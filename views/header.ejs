@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.css">
+    <script src="public/jquery.js"></script>
+    <script src="bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+</head>
+<body>
+<header>
+    <h1><%= title %></h1>
+    <% if(user){ %>
+    <span><a href="/logout"><button type="button" class="btn btn-danger">退出</button></a></span>
+    <% }else{ %>
+    <div class="log">
+    <!--<span><a href="/login"><button type="button" class="btn btn-success">登录</button></a></span>-->
+    <!--<span><a href="/reg"><button type="button" class="btn btn-success">注册</button></a></span>-->
+    </div>
+    <% } %>
+</header>
+
+
+<article>
+    <% if(success){ %>
+    <div><%= success %></div>
+    <%}%>
+    <% if(error){ %>
+    <div><%= error %></div>
+    <%}%>

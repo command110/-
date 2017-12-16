@@ -1,0 +1,36 @@
+<% include header %>
+<form class="add" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">用户名：</label>
+        <input name="username" type="text" class="form-control" id="exampleInputEmail1" placeholder="用户名">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">姓名：</label>
+        <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="姓名">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">密码：</label>
+        <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">再次确认密码：</label>
+        <input name="password_repeat" type="password" class="form-control" id="exampleInputPassword1" placeholder="再次确认密码">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">手机：</label>
+        <input name="tel" type="text" class="form-control" id="exampleInputEmail1" placeholder="手机">
+    </div>
+    <div class="form-group">
+
+        <label for="exampleInputEmail1">邮箱：</label>
+        <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="邮箱">
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> 启用
+        </label>
+    </div>
+    <button type="submit" class="btn btn-info">提交</button>
+    <button type="submit" class="btn btn-default">取消</button>
+</form>
+<% include footer %>

@@ -1,0 +1,23 @@
+<% include header %>
+<form class="edit" method="post"action="/edit/<%= doc.username%>/<%= doc.time %>">
+    <div class="form-group">
+        <label for="exampleInputEmail1">用户名：</label>
+        <input name="username" type="text" class="form-control" placeholder="用户名"value="<%= doc.username %>" disabled>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">姓名：</label>
+        <input name="name" type="text" class="form-control" placeholder="姓名" value="<%= doc.name %>" disabled>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">手机：</label>
+        <input name="tel" type="text" class="form-control" placeholder="手机" value="<%= doc.tel %>">
+    </div>
+    <div class="form-group">
+
+        <label for="exampleInputEmail1">邮箱：</label>
+        <input name="email" type="email" class="form-control" placeholder="邮箱" value="<%= doc.email %>">
+    </div>
+    <a href="/edit/<%= doc.name %>/<%= doc.title %>/<%= doc.time %>"><button type="submit" class="btn btn-info">修改</button></a>
+</form>
+
+<% include footer %>
